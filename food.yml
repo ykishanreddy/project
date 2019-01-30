@@ -2,5 +2,8 @@
 - hosts: web
   roles:
     - httpd
+  tasks:
+    - name: download html
+      git: rep=https://github.com/demoglot/html-samples-food.git dest=/var/www/html
 
 
